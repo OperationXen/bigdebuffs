@@ -635,7 +635,6 @@ function BigDebuffs:AttachUnitFrame(unit)
             frame:SetPoint(unpack(self.db.profile.unitFrames[unit].position))
         else
             -- No saved position, anchor to the blizzard position
-            if WOW_PROJECT_ID ~= WOW_PROJECT_CLASSIC then LoadAddOn("Blizzard_ArenaUI") end
             local relativeFrame = _G[anchors.Blizzard.units[unit]] or UIParent
             frame:SetPoint("CENTER", relativeFrame, "CENTER")
         end
